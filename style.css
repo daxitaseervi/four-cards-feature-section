@@ -1,0 +1,215 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+
+  --weight-light: 200;
+  --weight-medium: 400;
+  --weight-bold: 600;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section {
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+.main-heading {
+  color: var(--grey-500);
+  font-weight: var(--weight-light);
+  font-size: 28px;
+  
+}
+
+.subheading {
+  color: var(--grey-500);
+  font-weight: var(--weight-bold);
+  font-size: 28px;
+}
+
+.description {
+  color: var(--grey-500);
+  text-align: center;
+  margin-block-start: 10px;
+  max-width: 540px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.featured-cards {
+  padding-block-start: 40px;
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "SV TM  CL"
+  "SV KR  CL";
+}
+
+.supervisor, 
+.team-builder,
+.karma,
+.calculator {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.07);
+}
+
+.supervisor {
+  border-top: 4px solid var(--cyan);
+  grid-area: SV;
+}
+
+.team-builder {
+  border-top: 4px solid var(--red);
+  grid-area: TM;
+}
+
+.karma {
+  border-top: 4px solid var(--orange);
+  grid-area: KR;
+}
+
+.calculator {
+  border-top: 4px solid var(--blue);
+  grid-area: CL;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  color: var(--grey-500);
+  margin-block-end: 5px;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: var(--grey-400);
+}
+
+.featured-img {
+  margin-block-start: 26px;
+  margin-block-end: 16px;
+  align-self: flex-end;
+  width: 52px;
+}
+
+/* 375px */
+@media screen and (max-width: 23.4375rem) { 
+  body {
+    padding: 20px;
+  }
+
+  article {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .subheading {
+    font-size: 22px;
+  }
+
+  .description {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .featured-cards {
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+      "SV"
+      "TM"
+      "KR"
+      "CL";
+  }
+
+  .supervisor, 
+  .team-builder,
+  .karma,
+  .calculator {
+    width: 300px;
+  }
+
+  .card-title {
+  font-size: 16px;
+  }
+
+  .card-desc {
+  font-size: 12px;
+  }
+
+  .featured-img {
+    width: 48px;
+  }
+}
+
+/* 700px */
+@media screen and (max-width: 43.75rem) {
+  .description {
+    padding: 20px;
+  }
+
+  .featured-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "SV"
+      "TM"
+      "KR"
+      "CL";
+    justify-items: center;
+  }
+
+  .supervisor,
+  .team-builder,
+  .karma,
+  .calculator {
+    width: 100%;
+    max-width: 400px;
+  }
+}
