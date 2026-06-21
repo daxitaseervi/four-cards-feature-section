@@ -15,7 +15,7 @@ The biggest challenge was making the layout responsive. While the desktop versio
 - Better understood how layout decisions affect different screen sizes.
 
 ## Project
-- Live Site URL: 
+- Live Site URL: https://daxitaseervi.github.io/four-cards-feature-section/
 ![Project Screenshot](/images/project-screenshot.png)
 
 ## Links
